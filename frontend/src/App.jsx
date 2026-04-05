@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const DEFAULT_BASE = "USD";
 const DEFAULT_SYMBOLS = ["EUR", "GBP", "INR", "JPY", "AUD", "CAD"];
 
-const API_URL = "http://localhost:8000/api/rates";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api/rates";
 
 function formatDate(value) {
   if (!value) return "Unknown";
